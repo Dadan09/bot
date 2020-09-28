@@ -3,12 +3,6 @@ error_reporting(0);
 include 'curl.php';
 
 
-function referral($ref) {
-	$fake_name = curl('https://fakenametool.net/generator/random/id_ID/indonesia');
-	preg_match_all('/<td>(.*?)<\/td>/s', $fake_name, $result);
-
-	$username = 
-	$password = 
 
 
 
@@ -21,7 +15,7 @@ function referral($ref) {
 		'X-Requested-With: XMLHttpRequest'
 	];
 
-	$register = curl('https://gm88k.com/index/user/do_register.html', 'user_name='.$username[0].'&tel='.$number.'&pwd='.$password.'&deposit_pwd='.$password.'&invite_code='.$ref, $headers);
+	$login = curl('https://gm88k.com/index/user/do_register.html', 'user_name='.$username[0].'&tel='.$number.'&pwd='.$password.'&deposit_pwd='.$password.'&invite_code='.$ref, $headers);
 
 
 	if (stripos($register, '"info":"Transaksi berhasil"')) {
