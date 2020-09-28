@@ -7,16 +7,8 @@ function referral($ref) {
 	$fake_name = curl('https://fakenametool.net/generator/random/id_ID/indonesia');
 	preg_match_all('/<td>(.*?)<\/td>/s', $fake_name, $result);
 
-	$name = $result[1][0];
-	$alamat = $result[1][2];
-	$base = ['0878', '0813', '0838', '0851', '0853'];
-	$rand_base = array_rand($base);
-	$number = $base[$rand_base].number(8);
-	$domain = ['carpin.org', 'novaemail.com'];
-	$rand = array_rand($domain);
-	$email = str_replace(' ', '', strtolower($name)).'@'.$domain[$rand];
-	$username = explode('@', $email);
-	$password = random(8);
+	$username = 
+	$password = 
 
 
 
